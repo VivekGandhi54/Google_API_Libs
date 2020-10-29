@@ -1,0 +1,49 @@
+query = "<field> <operator> <>"
+
+MIME TYPES
+	PDF --- 'application/pdf'
+	JPEG --- 'image/jpeg'
+	PNG --- 'image/png'
+	
+	Plain Text --- 'text/plain'
+	CSV --- 'text/csv'
+	TSV --- 'text/tab-separated-values'
+	Zip --- 'application/zip'
+	JSON --- 'application/vnd.google-apps.script+json'
+	
+	MS Word Doc --- 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+	MS Excel Sheet --- 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+	MS PowerPoint --- 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
+
+
+VALID FIELDS
+	name --- string
+	fullText --- string
+	mimeType --- string
+	modifiedTime --- date
+	viewedByMeTime --- date
+	trashed --- boolean
+	starred --- boolean
+	parents --- collection
+	owners --- collection
+	writers --- collections
+	readers --- collections
+	sharedWithMe --- boolean
+	properties --- collection
+
+
+DATE --- RFC 3339 format, default timezone is UTC, e.g. 2012-06-04T12:00:00-08:00.
+
+VALID OPERATORS
+	contains --- string
+	in --- collection
+	and --- logical
+	or --- logical
+	not --- negate
+	has --- collection contains element matching params
+	= --- equality
+	!= --- inequality
+	< --- less than
+	<= --- less than or equal to
+	> --- greater than
+	>= --- greater than or equal to
